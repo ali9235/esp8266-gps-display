@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+build/
+.pio/
+*.bin
+*.elf
+*.hex
+*.obj
+*.exe
+*.log
+private/
