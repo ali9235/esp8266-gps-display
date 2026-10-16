@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+<title id="title">Atlas reference state decision flow</title>
+<desc id="desc">No bytes means no data. An input gap over two seconds means stale. Invalid coordinates mean waiting. Valid coordinates up to five seconds old mean recent position; older coordinates mean stale.</desc>
+<defs><marker id="tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#91d9ff"/></marker></defs>
+<rect width="1200" height="740" rx="20" fill="#0c1520"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<text x="48" y="45" fill="#91d9ff" font-size="15" letter-spacing="3">VOLTRA / ATLAS</text>
+<text x="1152" y="45" text-anchor="end" fill="#8da3b9" font-size="13">02 — STATE DECISION FLOW</text>
+<text x="48" y="101" fill="#f0f5fa" font-size="34" font-weight="700">Does this reading still mean “now”?</text>
+<text x="48" y="137" fill="#a9b9c9" font-size="18">Branch order matches the reference classifier. This is not an observed GPS test.</text>
+
+<g fill="#142231" stroke="#314457"><rect x="64" y="183" width="440" height="72" rx="11"/><rect x="64" y="298" width="440" height="72" rx="11"/><rect x="64" y="413" width="440" height="72" rx="11"/><rect x="64" y="528" width="440" height="72" rx="11"/></g>
+<g fill="#f0f5fa" font-size="22" font-weight="600" text-anchor="middle"><text x="284" y="227">Have any input bytes been seen?</text><text x="284" y="342">Is the input gap ≤ 2,000 ms?</text><text x="284" y="457">Are coordinates valid and in range?</text><text x="284" y="572">Is position age ≤ 5,000 ms?</text></g>
+
+<g stroke="#91d9ff" stroke-width="2" fill="none" marker-end="url(#tip)"><path d="M284 255V287"/><path d="M284 370V402"/><path d="M284 485V517"/><path d="M504 219H648"/><path d="M504 334H648"/><path d="M504 449H648"/><path d="M504 564H648"/><path d="M284 600V647H1104V334H1032"/></g>
+<g fill="#91d9ff" font-size="14" font-weight="600"><text x="302" y="280">YES</text><text x="302" y="395">YES</text><text x="302" y="510">YES</text><text x="563" y="208">NO</text><text x="563" y="323">NO</text><text x="563" y="438">NO</text><text x="563" y="553">YES</text><text x="302" y="629">NO — THE CACHED POSITION IS TOO OLD</text></g>
+
+<rect x="660" y="183" width="372" height="72" rx="11" fill="#1b2938" stroke="#415365"/>
+<rect x="660" y="298" width="372" height="72" rx="11" fill="#37282b" stroke="#b57f7a"/>
+<rect x="660" y="413" width="372" height="72" rx="11" fill="#332b1f" stroke="#9d875e"/>
+<rect x="660" y="528" width="372" height="72" rx="11" fill="#18362f" stroke="#75ae96"/>
+<g font-size="20" font-weight="700" text-anchor="middle"><text x="846" y="227" fill="#b9c8d8">NO DATA</text><text x="846" y="342" fill="#efb5af">STALE</text><text x="846" y="457" fill="#e7c486">WAITING FOR POSITION</text><text x="846" y="572" fill="#a8e7cc">RECENT POSITION</text></g>
+<text x="48" y="702" fill="#8da3b9" font-size="15">Freshness limits are reference policies, not accuracy specifications. Stale coordinates are hidden.</text>
+</g></svg>

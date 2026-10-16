@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+<title id="title">Atlas reference architecture</title>
+<desc id="desc">Receiver or explicit USB replay feeds TinyGPSPlus, then a freshness classifier and an optional display. This is software architecture, not verified physical wiring.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#77c8ef"/></marker></defs>
+<rect width="1200" height="590" rx="20" fill="#0c1520"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<text x="48" y="45" fill="#91d9ff" font-size="15" letter-spacing="3">VOLTRA / ATLAS</text>
+<text x="1152" y="45" text-anchor="end" fill="#8da3b9" font-size="13">01 — REFERENCE ARCHITECTURE</text>
+<text x="48" y="103" fill="#f0f5fa" font-size="34" font-weight="700">From receiver bytes to a readable state.</text>
+<text x="48" y="139" fill="#a9b9c9" font-size="18">A visible data path, with validity and freshness checked before presentation.</text>
+
+<g fill="#142231" stroke="#314457"><rect x="48" y="189" width="240" height="226" rx="12"/><rect x="336" y="189" width="240" height="226" rx="12"/><rect x="624" y="189" width="240" height="226" rx="12"/><rect x="912" y="189" width="240" height="226" rx="12"/></g>
+<g stroke="#77c8ef" stroke-width="2" marker-end="url(#arrow)"><path d="M300 298H324"/><path d="M588 298H612"/><path d="M876 298H900"/></g>
+
+<g fill="#91d9ff" font-size="14" letter-spacing="1"><text x="68" y="222">01 / INPUT</text><text x="356" y="222">02 / PARSER</text><text x="644" y="222">03 / POLICY</text><text x="932" y="222">04 / OUTPUT</text></g>
+<g fill="#f0f5fa" font-size="23" font-weight="600"><text x="68" y="266">Receiver / USB</text><text x="356" y="266">TinyGPSPlus</text><text x="644" y="266">Freshness gate</text><text x="932" y="266">Status + screen</text></g>
+<g fill="#adbdcd" font-size="16">
+<text x="68" y="308">NMEA input stream</text><text x="68" y="334">Physical RX or labelled</text><text x="68" y="358">USB replay input</text>
+<text x="356" y="308">Checksum-aware parsing</text><text x="356" y="334">Valid fields, not merely</text><text x="356" y="358">received traffic</text>
+<text x="644" y="308">2 s input / 5 s position</text><text x="644" y="334">Coordinate validity</text><text x="644" y="358">and age classification</text>
+<text x="932" y="308">Recent fields or a status</text><text x="932" y="334">Stale coordinates</text><text x="932" y="358">are suppressed</text>
+</g>
+<g fill="#91d9ff" font-family="Consolas,monospace" font-size="14"><text x="68" y="391">Stream&amp; input</text><text x="356" y="391">gps.encode(byte)</text><text x="644" y="391">atlas::classify(...)</text><text x="932" y="391">render(state)</text></g>
+
+<text x="48" y="457" fill="#8da3b9" font-size="13" letter-spacing="2">PRESENTATION STATES</text>
+<g font-size="15" font-weight="600">
+<rect x="48" y="475" width="222" height="43" rx="7" fill="#1b2938"/><text x="159" y="502" text-anchor="middle" fill="#b9c8d8">NO DATA</text>
+<rect x="292" y="475" width="300" height="43" rx="7" fill="#332b1f"/><text x="442" y="502" text-anchor="middle" fill="#e7c486">WAITING FOR POSITION</text>
+<rect x="614" y="475" width="278" height="43" rx="7" fill="#18362f"/><text x="753" y="502" text-anchor="middle" fill="#a8e7cc">RECENT POSITION</text>
+<rect x="914" y="475" width="238" height="43" rx="7" fill="#37282b"/><text x="1033" y="502" text-anchor="middle" fill="#efb5af">STALE</text>
+</g>
+<text x="48" y="558" fill="#8da3b9" font-size="15">New reference software • physical adapters disabled by default • not a verified wiring diagram or GPS result</text>
+</g></svg>
