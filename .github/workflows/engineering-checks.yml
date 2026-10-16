@@ -1,0 +1,26 @@
+name: Engineering checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  software-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Check out the reviewed source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # verified v4 ref
+        with:
+          persist-credentials: false
+      - name: Validate local documentation and bounded secret patterns
+        run: python3 tools/check_docs.py
+      - name: Build portable core with warnings as errors
+        run: g++ -std=c++17 -Wall -Wextra -Werror tests/test_core.cpp -o "$RUNNER_TEMP/core-tests"
+      - name: Run portable core (not Arduino or hardware validation)
+        run: '"$RUNNER_TEMP/core-tests"'

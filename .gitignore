@@ -10,3 +10,11 @@ build/
 *.exe
 *.log
 private/
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+*.pem
+*.key
+secrets.h
+credentials.h

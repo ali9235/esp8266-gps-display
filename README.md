@@ -1,6 +1,12 @@
 <h1 align="center">VOLTRA</h1>
 <h2 align="center">ATLAS</h2>
 
+## Engineering documentation
+
+[**VOLTRA Engineering Standard**](docs/ENGINEERING_STANDARD.md) · [Architecture & technical deep dive](docs/ARCHITECTURE.md) · [Design decisions](docs/DECISIONS.md) · [Tests & evidence](docs/VALIDATION.md) · [Security & privacy](SECURITY.md) · [Roadmap](docs/ROADMAP.md) · [History](CHANGELOG.md) · [Releases](docs/RELEASING.md)
+
+A shared engineering format, with project-specific evidence. No unperformed hardware test, semantic release or CI success is implied.
+
 <p align="center"><a href="docs/ENGINEERING_GUIDE.md">Understand the build</a> · <a href="docs/DEMO_TEST_PLAN.md">Plan a real demo</a> · <a href="tests/hardware-observations.csv">Record observations</a></p>
 <p align="center"><strong>GPS DATA DISPLAY · ESP8266 · EMBEDDED INTERFACES</strong></p>
 <p align="center">A coordinate is useful only when you know how recent it is.</p>
