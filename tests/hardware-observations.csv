@@ -1,0 +1,5 @@
+test_id,source_revision,condition,reference,observed,unit,acceptance_rule,status,evidence_file,notes
+G1,,,,,,Report actual input mode and startup state,not_run,,
+G2,,,,,,No valid position from arbitrary bytes alone,not_run,,
+G3,,,,,ms,Compare transition timing with the recorded freshness policy,not_run,,
+G4,,,,,m,Use a credible reference and uncertainty before claiming accuracy,not_run,,Do not store personal coordinates in public logs

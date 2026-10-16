@@ -1,5 +1,7 @@
 <h1 align="center">VOLTRA</h1>
 <h2 align="center">ATLAS</h2>
+
+<p align="center"><a href="docs/ENGINEERING_GUIDE.md">Understand the build</a> · <a href="docs/DEMO_TEST_PLAN.md">Plan a real demo</a> · <a href="tests/hardware-observations.csv">Record observations</a></p>
 <p align="center"><strong>GPS DATA DISPLAY · ESP8266 · EMBEDDED INTERFACES</strong></p>
 <p align="center">A coordinate is useful only when you know how recent it is.</p>
 
@@ -76,6 +78,16 @@ Two Arduino build variants passed. Seventeen state checks passed on the first na
 ### Next milestone
 
 Demonstrate an actual first fix, a deliberate data interruption and recovery on this assembly. Confirm component identities and electrical connections, then compare against a reference before quoting accuracy. Do not publish home coordinates or private routes.
+
+## Understand, demonstrate, verify
+
+[Engineering walkthrough](docs/ENGINEERING_GUIDE.md) · [Real demonstration & test plan](docs/DEMO_TEST_PLAN.md) · [Measurement template](tests/hardware-observations.csv)
+
+The walkthrough explains the actual reference source and visible hardware. It includes troubleshooting questions and software-only learning exercises. The test plan specifies what a genuine recording and measurement should show; all hardware-observation rows remain **not_run** until a real test is performed.
+
+[![Real prototype annotated with visible components and purpose notes](media/component-guide.png)](media/component-guide.png)
+
+[Open the full-size component guide](media/component-guide.png) · [Editable SVG](media/component-guide.svg). The original photograph is embedded unchanged. Unknown functions are marked; leader lines are **not a wiring schematic**.
 
 ---
 
